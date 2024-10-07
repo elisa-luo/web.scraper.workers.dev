@@ -8,7 +8,11 @@ class Scraper {
 
   async fetch(url) {
     this.url = url
-    this.response = await fetch(url)
+    this.response = await fetch(url, {
+      headers: {
+        "User-Agent": "Elisa's Scraper",
+      },
+    })
 
     const server = this.response.headers.get('server')
 
