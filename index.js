@@ -41,6 +41,7 @@ async function handleAPIRequest({ url, selector, attr, spaced, pretty }) {
   let scraper, result
 
   try {
+    console.log("handleAPIRequest")
     scraper = await new Scraper().fetch(url, {headers: {
         "User-Agent": "Elisa's Scraper",
       }})
