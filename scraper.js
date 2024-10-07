@@ -11,7 +11,9 @@ class Scraper {
       const headers = new Headers({
       'User-Agent': "Elisa"
     });
-    this.response = await fetch(url, {method: "POST", headers})
+    this.response = await fetch(url, {method: "POST", {
+      'User-Agent': "Elisa"
+    }})
 
     const server = this.response.headers.get('server')
 
